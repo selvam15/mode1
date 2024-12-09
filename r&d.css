@@ -1,0 +1,464 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #000000ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preloader:before {
+    content: "";
+    width: 180px;
+    height: 140px;
+    background: url('biocog-removebg-preview.png') no-repeat center center;
+    background-size: contain;
+    animation: blink-animation 1.5s infinite;
+}
+
+@keyframes blink-animation {
+    0%, 100% {
+        opacity: 0;
+    }
+    40%,80% {
+        opacity: 1;
+    }
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: rgb(83, 161, 255);
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #0073ff;
+}
+
+.profile-section {
+    display: inline-block;
+    position: relative;
+    margin-left: -30px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 30px;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+.navbar.sticky .profile-img {
+    width: 35px;
+    height: 35px;
+}
+
+.menu-btn {
+    color: #8eb2ff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+    margin-right: 30px;
+}
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px -5px 0;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #eef2ff;
+    text-align: center;
+    min-width: 250px;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.workflow p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+.workflow img {
+    width: 60%;
+    margin: 10px auto;
+    display: block;
+}
+
+.steps p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+.main-content {
+    flex: 3;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 90px auto 20px;
+    max-width: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h2 {
+    margin: 15px 0;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.card p{
+    font-size: 16px;
+    margin: 20px;
+} 
+
+.learn-more {
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+footer {
+    background-color: #eef2ff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #0056b3;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.logo{
+    margin-left: 100px;
+}
+
+@keyframes fadeIn {
+    0% {
+    opacity: 0.5;
+    color: #0073ff;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
+@media (max-width: 947px) {
+    .sidebar {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .navbar .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #111;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        margin: 10px 0;
+    }
+
+    .navbar .menu li a {
+        font-size: 24px;
+        color: #fff;
+        display: inline-block;
+    }
+
+    .profile-section {
+        margin-left: -30px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .card {
+        margin: 100px auto;
+    }
+
+    .logo{
+        margin-left: 10px;
+    }
+
+    .main-content h1{
+        font-size: 30px;
+    }
+
+    .card {
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 90px auto 20px;
+        max-width: 90%;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-top: 0px;
+    }
+
+    .card p{
+        font-size: 10px;
+    }
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: rgb(255, 255, 255);
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar .menu li a {
+    color: #0073ff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar .menu li a:hover {
+    color: rgb(83, 161, 255);
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #0073ff;
+}
+
+.menu-btn {
+    display: none;
+    color: #8eb2ff;
+    font-size: 23px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #111;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        margin: 0px 0;
+    }
+
+    .navbar .menu li a {
+        font-size: 24px;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.logo{
+    margin-left: 100px;
+}
+
+@media (max-width: 576px) {
+    .profile-img {
+        margin-left: 60px;
+    }
+
+    .logo{
+        margin-left: 10px;
+    }
+}

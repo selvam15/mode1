@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="r&d.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+  <link rel="icon" href="lo.png">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>Drug Discovery Platform</title>
+</head>
+<body>
+  <div id="preloader"></div>
+  <nav class="navbar">
+      <div class="max-width">
+          <div class="logo"><img src="biocog-removebg-preview.png" style="height: 40px;"></div>
+          <ul class="menu">
+              <li><a href="index.html" class="menu-btn">Home</a></li>
+              <li><a href="index.html#services" class="menu-btn">About</a></li>
+              <li><a href="r&d.html" class="menu-btn">R & D</a></li>
+              <li><a href="tranning.html" class="menu-btn">Trainning</a></li>
+              <li><a href="news.html" class="menu-btn">News</a></li>
+              <li><a href="contact.html" class="menu-btn"></a></li>
+              <li><a href="signup.html" class="foodbank-menu-btn" id="foodbank-login-btn">Login</a></li>
+          </ul>
+          <div class="profile-section">
+              <label for="profile-pic">
+                  <img src="default-avatar.jpg" alt="Profile" class="profile-img">
+              </label>
+              <input type="file" id="profile-pic" style="display: none;">
+          </div>
+          <div class="menu-btn">
+              <i class="fas fa-bars"></i>
+          </div>
+      </div>
+  </nav>
+  <br>
+  <div class="container">
+    <div class="sidebar">
+      <h2>End to End<br>AI - Drug Discovery Platform</h2>
+      <div class="workflow">
+        <p>Client's Input:</p>
+        <img src="sid1.png" alt="Input">
+        <div class="steps">
+          <p>CogniGen</p>
+          <img src="sid.png" alt="Input">
+          <p>CogniGen</p>
+          <img src="sid.png" alt="Input">
+          <p>CogniGen</p>
+          <img src="sid.png" alt="Input">
+          <p>CogniGen</p>
+          <img src="sid.png" alt="Input">
+        </div>
+        <p>Output:</p>
+        <img src="sid3.png" alt="Output">
+      </div>
+    </div>
+    <div class="main-content">
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+      <h1>Services</h1>
+    </div>
+      <div data-aos="zoom-out-up">
+      <div class="card" id="drug-design">
+        <img src="r&d1.png" alt="Drug Design">
+        <h2>Drug Design</h2>
+        <p>Drug design is the process of creating new medications by identifying and optimizing molecules to interact with specific biological targets.</p>
+        <button class="learn-more">Learn More</button>
+      </div>
+      <div class="card" id="ngs">
+        <img src="r&d2.png" alt="NGS">
+        <h2>NGS</h2>
+        <p>Next-Generation Sequencing (NGS) is a high-throughput technology that allows rapid sequencing of entire genomes or targeted DNA/RNA regions with high accuracy and efficiency.</p>
+        <button class="learn-more">Learn More</button>
+      </div>
+      <div class="card" id="ai-ml">
+        <img src="r&d3.png" alt="AI/ML">
+        <h2>AI / ML</h2>
+        <p>Artificial Intelligence (AI) and Machine Learning (ML) involve creating systems that simulate human intelligence and enable computers to learn and make decisions from data.</p>
+        <button class="learn-more">Learn More</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <footer>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit"><a href="contact.html" style="text-decoration: none; color:white">Contact</a></button>
+    </form>
+    <p>Copyright © 2024 BioCogniz: All Rights Reserved.</p>
+  </footer>
+<script>
+    $(document).ready(function(){
+      if(localStorage.getItem('profileImage')){
+          $('.profile-img').attr('src', localStorage.getItem('profileImage'));
+      }
+
+      $('#profile-pic').change(function(){
+          const file = this.files[0];
+          if(file){
+              const reader = new FileReader();
+              reader.onload = function(event){
+                  const imageSrc = event.target.result;
+                  $('.profile-img').attr('src', imageSrc);
+                  localStorage.setItem('profileImage', imageSrc);
+              };
+              reader.readAsDataURL(file);
+          }
+      });
+
+      $('.profile-border').click(function(){
+          $('#profile-pic').click();
+      });
+    });
+
+    $(document).ready(function(){
+      $(window).scroll(function(){
+          if(this.scrollY > 20){
+              $('.navbar').addClass("sticky");
+          }else{
+              $('.navbar').removeClass("sticky");
+          }
+          
+          if(this.scrollY > 500){
+              $('.scroll-up-btn').addClass("show");
+          }else{
+              $('.scroll-up-btn').removeClass("show");
+          }
+      });
+
+      $('.scroll-up-btn').click(function(){
+          $('html').animate({scrollTop: 0});
+          $('html').css("scrollBehavior", "auto");
+      });
+
+      $('.navbar .menu li a').click(function(){
+          $('html').css("scrollBehavior", "smooth");
+      });
+
+      $('.menu-btn').click(function(){
+          $('.navbar .menu').toggleClass("active");
+          $('.menu-btn i').toggleClass("active");
+      });
+
+      $('.carousel').owlCarousel({
+          margin: 20,
+          loop: true,
+          autoplay: true,
+          autoplayTimeOut: 2000,
+          autoplayHoverPause: true,
+          responsive: {
+              0:{
+                  items: 1,
+                  nav: false
+              },
+              600:{
+                  items: 2,
+                  nav: false
+              },
+              1000:{
+                  items: 3,
+                  nav: false
+              }
+          }
+      });
+    });
+
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      
+      setTimeout(() => {
+          preloader.style.transition = 'opacity 0.5s ease'; 
+          preloader.style.opacity = '0';
+  
+          setTimeout(() => {
+              preloader.style.display = 'none';
+          }, 500); 
+      }, 3000); 
+  });
+  
+</script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
+
+

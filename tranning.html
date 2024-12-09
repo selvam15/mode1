@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCogniz Training Page</title>
+    <link rel="stylesheet" href="tranning.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="icon" href="lo.png">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div id="preloader"></div>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><img src="biocog-removebg-preview.png" style="height: 40px;"></div>
+            <ul class="menu">
+                <li><a href="index.html" class="menu-btn">Home</a></li>
+                <li><a href="index.html#services" class="menu-btn">About</a></li>
+                <li><a href="r&d.html" class="menu-btn">R & D</a></li>
+                <li><a href="tranning.html" class="menu-btn">Trainning</a></li>
+                <li><a href="news.html" class="menu-btn">News</a></li>
+                <li><a href="contact.html" class="menu-btn"></a></li>
+                <li><a href="signup.html" class="foodbank-menu-btn" id="foodbank-login-btn">Login</a></li>
+            </ul>
+            <div class="profile-section">
+                <label for="profile-pic">
+                    <img src="default-avatar.jpg" alt="Profile" class="profile-img">
+                </label>
+                <input type="file" id="profile-pic" style="display: none;">
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    
+<div class="category-navbar">
+    <div class="max-width">
+        <ul class="category-menu" style="background-color: rgb(255, 255, 255);">
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#webinar">Webinar</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#mentorship">Mentorship</a></li>
+            <li><a href="#workshop">Workshop-on-site</a></li>
+        </ul>
+    </div>
+</div>
+
+    <main>
+        <section id="courses">
+            <h2>Courses</h2>
+            <div class="courses">
+                <div class="course">
+                    <img src="r&d1.png" alt="Drug Design">
+                    <h3>Drug Design</h3>
+                    <p>Drug design is the inventive process of finding new medications based on the knowledge of a biological target.</p>
+                    <button>Start</button>
+                </div>
+                <div class="course">
+                    <img src="r&d2.png" alt="NGS">
+                    <h3>NGS</h3>
+                    <p>Next-generation sequencing (NGS) is a DNA sequencing technology that allows researchers to quickly sequence large amounts of DNA or RNA.</p>
+                    <button>Start</button>
+                </div>
+                <div class="course">
+                    <img src="r&d3.png" alt="AI / ML">
+                    <h3>AI / ML</h3>
+                    <p>AI acts as a powerful catalyst in narrowing the gap between disease understanding and the identification of potential therapeutic agents.</p>
+                    <button>Start</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="webinar" style="display: none;">
+            <h2>Webinar</h2>
+        
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+
+                <!-- First Video -->
+                <div class="video-container">
+                    <img src="r&d1.png" alt="Video Cover 1" 
+                        onclick="playVideo('videoCover1', 'videoIframe1')" id="videoCover1">
+                    <span class="video-title">Webinar 1: R&D Session 1</span>
+                    <iframe width="440" height="265" src="https://www.youtube.com/embed/OI2pxc-CGd0?si=GcYhQ4kZnEpXBizr" 
+                            title="YouTube video player 1" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                            id="videoIframe1"></iframe>
+                </div>
+        
+                <!-- Second Video -->
+                <div class="video-container">
+                    <img src="r&d2.png" alt="Video Cover 2" 
+                        onclick="playVideo('videoCover2', 'videoIframe2')" id="videoCover2">
+                    <span class="video-title">Webinar 2: R&D Session 2</span>
+                    <iframe width="440" height="265" src="https://www.youtube.com/embed/kqEl_1-0fT8?si=AR75KKune-xnXz17" 
+                            title="YouTube video player 2" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                            id="videoIframe2"></iframe>
+                </div>
+        
+                <!-- Third Video -->
+                <div class="video-container">
+                    <img src="r&d3.png" alt="Video Cover 3" 
+                        onclick="playVideo('videoCover3', 'videoIframe3')" id="videoCover3">
+                    <span class="video-title">Webinar 3: R&D Session 3</span>
+                    <iframe width="440" height="265" src="https://www.youtube.com/embed/geHRwOSL21A?si=y3j1OL4ju8bSyA78" 
+                            title="YouTube video player 3" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                            id="videoIframe3"></iframe>
+                </div>
+        
+            </div>
+        </section>
+
+    
+        <section id="project" style="display: none;">
+            <h2>Project</h2>
+            <p>Details about projects go here.</p>
+        </section>
+    
+        <section id="mentorship" style="display: none;">
+            <h2>Mentorship</h2>
+            <section class="team-one" id="team">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="single">
+                                <div class="circle"></div>
+                                <div class="inner">
+                                    <h3>Dr. Dakshinamurthy Sivakumar</h3>
+                                    <p>Ph.D., CEO & Co-Founder</p>
+                                    <div class="image">
+                                        <img src="f1.webp" alt="Dr. Dakshinamurthy Sivakumar">
+                                    </div>
+                                    <div class="social">
+                                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>
+                    
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="single" id="s1">
+                                <div class="circle"></div> 
+                                <div class="inner">
+                                    <h3>Dr. Anoosha Paruchuri</h3>
+                                    <p>Ph.D., CSO & Co-Founder</p>
+                                    <div class="image">
+                                        <img src="f2.webp" alt="Dr. Anoosha Paruchuri">
+                                    </div>
+                                    <div class="social">
+                                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </section>
+        
+        </section>
+    
+        <section id="workshop" style="display: none;">
+            <h2>Workshop</h2>
+            <p>Details about workshops go here.</p>
+        </section>
+        <div class="contact">
+            <input type="email" placeholder="Mail ID">
+            <button><a href="contact.html" style="text-decoration: none; color:white">Contact</a></button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 BioCogniz - All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        document.querySelectorAll('.category-menu a').forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault(); 
+                const targetId = link.getAttribute('href').substring(1); 
+                const targetSection = document.getElementById(targetId);
+                
+                document.querySelectorAll('main > section').forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                } else {
+                    console.error('Target section not found:', targetId);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if (this.scrollY > 20) {
+                    $('.navbar').addClass('sticky');
+                } else {
+                    $('.navbar').removeClass('sticky');
+                }
+        
+                if (this.scrollY > 500) {
+                    $('.scroll-up-btn').addClass('show');
+                } else {
+                    $('.scroll-up-btn').removeClass('show');
+                }
+            });
+        
+            $('.scroll-up-btn').click(function () {
+                $('html').animate({ scrollTop: 0 });
+                $('html').css('scrollBehavior', 'auto');
+            });
+        
+            $('.navbar .menu li a').click(function () {
+                $('html').css('scrollBehavior', 'smooth');
+            });
+        
+            $('.menu-btn').click(function () {
+                $('.navbar .menu').toggleClass('active');
+                $('.menu-btn i').toggleClass('active');
+            });
+        });
+        
+
+
+        $(document).ready(function(){
+            if(localStorage.getItem('profileImage')){
+                $('.profile-img').attr('src', localStorage.getItem('profileImage'));
+            }
+        
+            $('#profile-pic').change(function(){
+                const file = this.files[0];
+                if(file){
+                    const reader = new FileReader();
+                    reader.onload = function(event){
+                        const imageSrc = event.target.result;
+                        $('.profile-img').attr('src', imageSrc);
+                        localStorage.setItem('profileImage', imageSrc);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        
+            
+            $('.profile-border').click(function(){
+                $('#profile-pic').click();
+            });
+        });
+
+        $('.carousel').owlCarousel({
+            margin: 20,
+            loop: true,
+            autoplay: true,
+            autoplayTimeOut: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0:{
+                    items: 1,
+                    nav: false
+                },
+                600:{
+                    items: 2,
+                    nav: false
+                },
+                1000:{
+                    items: 3,
+                    nav: false
+                }
+            }
+        });
+
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.style.transition = 'opacity 0.5s ease'; 
+                preloader.style.opacity = '0';
+        
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500); 
+            }, 3000);
+        });
+        
+        
+        
+        function playVideo(coverId, iframeId) {
+            document.getElementById(coverId).style.display = "none";
+    
+            const iframe = document.getElementById(iframeId);
+            iframe.style.display = "block";
+            iframe.src += "&autoplay=1";
+        }
+    </script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
+

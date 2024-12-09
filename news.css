@@ -1,0 +1,595 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #000000ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preloader:before {
+    content: "";
+    width: 180px;
+    height: 140px;
+    background: url('biocog-removebg-preview.png') no-repeat center center;
+    background-size: contain;
+    animation: blink-animation 1.5s infinite;
+}
+
+@keyframes blink-animation {
+    0%, 100% {
+        opacity: 0;
+    }
+    40%,80% {
+        opacity: 1;
+    }
+}
+
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    background-color: white;
+    margin-top: -20px;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #494949;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar.sticky .logo a span {
+    color: #7a7979;
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: rgb(83, 161, 255);
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #0073ff;
+}
+
+.profile-section {
+    display: inline-block;
+    position: relative;
+    margin-left: -30px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 30px;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+.navbar.sticky .profile-img {
+    width: 35px;
+    height: 35px;
+}
+
+.menu-btn {
+    color: #8eb2ff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+    margin-right: 30px;
+}
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+
+main {
+    margin-top: 100px;
+    text-align: center;
+    padding: 20px;
+}
+
+main h2 {
+    font-size: 40px;
+    color: #0078d7;
+    margin-bottom: 20px;
+    margin-top: -35px;
+}
+
+.contact {
+    margin-top: 30px;
+}
+
+.contact input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact button:hover {
+    background: #005bb5;
+}
+
+footer {
+    text-align: center;
+    background: #f1f1f1;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #555;
+    margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+    .category-navbar {
+        padding: 5px 0;
+    }
+
+    .category-menu a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    margin-top: -100px;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: rgb(255, 255, 255);
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #006aff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar .menu li a {
+    color: #0073ff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar .menu li a:hover {
+    color: rgb(83, 161, 255);
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #0073ff;
+}
+
+.menu-btn {
+    display: none;
+    color: #8eb2ff;
+    font-size: 23px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+@media (max-width: 947px) {
+    .news-section h2{
+        font-size: 20px;
+
+    }
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #111;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        margin: 0px 0;
+    }
+
+    .navbar .menu li a {
+        font-size: 24px;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.news-section {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.news-section h2 {
+    font-size: 36px;
+    color: #0078d7;
+    margin-bottom: 30px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.news-card {
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.news-card-content h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.news-card-content h3:hover {
+    color: #0078d7;
+}
+
+.news-card-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.news-card-content button {
+    background-color: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.news-card-content button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0078d7;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.modal-content #back-btn {
+    padding: 10px 20px;
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content #back-btn:hover {
+    background: #005bb5;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #0078d7;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%; 
+    max-width: 600px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+    }
+
+    .modal-body h3 {
+        font-size: 20px;
+    }
+
+    .modal-body p {
+        font-size: 14px; 
+    }
+
+    #back-btn {
+        font-size: 14px; 
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 90%;
+        left: 50%;
+    }
+
+    .logo{
+        margin-left: -50px;
+    }
+
+    .modal-body h3 {
+        font-size: 18px; 
+    }
+
+    .modal-body p {
+        font-size: 12px;
+    }
+
+    #back-btn {
+        font-size: 12px; 
+        padding: 6px 10px; 
+    }
+
+    .hd{
+        font-size: 2px;
+    }
+
+    .profile-section {
+        margin-left: 30px;
+    }
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .news-card img {
+        height: 150px; 
+    }
+
+    .news-card-content h3 {
+        font-size: 16px; 
+    }
+
+    .news-card-content p {
+        font-size: 12px; 
+    }
+
+    .news-card-content button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
